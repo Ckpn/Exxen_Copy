@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <title>Document</title>
+
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        .btn,
+        input {
+            border-radius: 0 !important;
+        }
+
+        .form-control::placeholder {
+            font-weight: 600;
+        }
+
+        .form-control:focus {
+            box-shadow: #ffcb04 0px 0px 0px 3px !important;
+        }
+
+        .myplay {
+            transition: .6s;
+            font-size: 1.5rem;
+            filter: drop-shadow(2px 2px 8px orangered)
+        }
+
+        .myplay:hover {
+            scale: 1.4;
+            filter: drop-shadow(3px 3px 1px orangered)
+        }
+
+        .mycard {
+            box-shadow: rgba(204, 204, 204, 0.25) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.3) 0px 18px 36px -18px inset;
+            transition: .4s all;
+            height: 100%;
+
+        }
+
+        .mycard:hover {
+
+            box-shadow: rgba(255, 255, 255, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 0.3) 0px 30px 60px -30px, rgba(137, 137, 138, 0.35) 0px -2px 6px 0px inset;
+            ;
+            filter: brightness(1.2);
+        }
+        @media screen and (max-width:768px) {
+             .my-logo{
+                width: 140px;
+            overflow: hidden;
+             }
+            
+        } 
+           
+       
+        
+       
+    </style>
+
+
+</head>
+
+<body>
+    <!-- bootstrap ile yapıcaz -->
+    <!-- boots kodllarını üste alta yapıstır -->
+    <!-- navın kodu boots tan cek -->
+    <!-- düzenlemelere başla -->
+    <!-- container sag sol bosluklu oluyor -->
+    <!-- px paddingi saga sola verir max px5 oluyor yetmezse diger alanları dene -->
+    <!-- w-100 yuzde yuz width  -->
+    <!-- bootstrap te ınput ıcın class verıp form control yazarız -->
+
+
+    <header>
+
+        <!-- Navbar start -->
+        <nav class="navbar navbar-expand bg-body-tertiary " style="background-color: #ffcb04 !important;">
+            <div class="container-lg flex-column px-lg-5 py-2">
+                <div class="d-flex justify-content-between align-items-center w-100 px-xl-5">
+                    <a class="navbar-brand my-logo " href="#"><img src="	https://wimage.exxen.com/img/landing/logo-web.svg"
+                            alt=""></a>
+                        <div class="collapse  navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav mb-2 mb-lg-0 gap-sm-3 flex-column flex-sm-row">
+                            <li class="nav-item d-lg-block d-none">
+                                <a class="nav-link active btn bg-black px-4 fw-bold shadow text-warning"
+                                    aria-current="page" href="#"> EXXENSPOR Ticari Üye Ol </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active btn btn-outline-warning shadow border border-black fw-bold px-sm-4"
+                                    aria-current="page" href="#">Üye Girişi </a>
+                            </li>
+                            <li class="nav-item dropdown ">
+                                <a class="nav-link fw-bold dropdown-toggle  fs-5 p-0 ps-1 pt-1" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-globe"></i>
+                                    TR
+                                </a>
+                                <ul class="dropdown-menu bg-dark dropdown-menu-end">
+                                    <li><a class="dropdown-item text-warning" href="#">Türkçe</a></li>
+                                    <li><a class="dropdown-item text-warning" href="#">English</a></li>
+                                    <li><a class="dropdown-item text-warning" href="#">العربية</a></li>
+                                    <li><a class="dropdown-item text-warning" href="#">Espanol</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                          <button class="navbar-toggler" style="width: 60px; height: 50px;" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="w-100 d-lg-none" >
+                    <a class="w-100 nav-link active btn bg-black p-3 fw-bold shadow text-warning" aria-current="page"
+                        href="#"> EXXENSPOR Ticari Üye Ol </a>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar end -->
+        <!--  SUBNAV start -->
+        <div class="bg-dark sticky-top">
+            <div class="container-lg px-lg-5 ">
+                <!-- form select form checkbox form radio form label -->
+                <form class="row px-xl-5 gap-2 gap-md-0  py-md-4 py-2 ">
+                    <div class="col-md-4 col-12">
+                        <input class="form-control fs-6 h-100 form-control-lg  shadow shadow-lg" type="text"
+                            placeholder="Ad soyad">
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <input class="form-control fs-6 h-100 form-control-lg  shadow shadow-lg" type="text"
+                            placeholder="E-mail Adresi">
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <button class="btn btn-warning btn-lg w-100 fw-bold" type="submit">Üye ol</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+        <!-- Subnav ends -->
+
+    </header>
+
+    <!-- Main starts -->
+
+    <div class="bg-black">
+        <section class="container-lg px-lg-5 ">
+            <div class="row px-xl-5 row-gap-4 ">
+                <div class="col-12 my-5">
+                    <img class="w-100" src="https://image.exxen.com/landing/14gun.jpg" alt="">
+                </div>
+                <div class="col-md-3 col-6">
+                    <a
+                        class="mycard w-100 position-relative d-flex flex-column justify-content-start align-items-center">
+
+                        <i class="myplay bi bi-google-play position-absolute mt-5 text-warning  "></i>
+                        <img class="w-100"
+                            src="https://image1.exxen.com/content/Y/Nl/40034/Poster.jpg?v=637656647853011273" alt="">
+                        <div class="text-white text-center fs-5 fw-bold p3">Şampiyonlar Ligi</div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a
+                        class="mycard w-100 position-relative d-flex flex-column justify-content-start align-items-center">
+
+                        <i class="myplay bi bi-google-play position-absolute mt-5 text-warning  "></i>
+                        <img class="w-100"
+                            src="https://image2.exxen.com/content/E/nl/40039/Poster.jpg?v=637656707497190085" alt="">
+                        <div class="text-white text-center fs-5 fw-bold p3">Avrupa Ligi</div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a
+                        class="mycard w-100 position-relative d-flex flex-column justify-content-start align-items-center">
+
+                        <i class="myplay bi bi-google-play position-absolute mt-5 text-warning  "></i>
+                        <img class="w-100"
+                            src="https://image3.exxen.com/content/s/pL/40040/Poster.jpg?v=637656738136316293" alt="">
+                        <div class="text-white text-center fs-5 fw-bold p3">Avrupa Konferans Ligi</div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a
+                        class="mycard w-100 position-relative d-flex flex-column justify-content-start align-items-center">
+
+                        <i class="myplay bi bi-google-play position-absolute mt-5 text-warning  "></i>
+                        <img class="w-100"
+                            src="https://image4.exxen.com/content/1/_Y/51444/Poster.jpg?v=638283753371825564" alt="">
+                        <div class="text-white text-center fs-5 fw-bold p3">Hollanda Eredivisie</div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a
+                        class="mycard w-100 position-relative d-flex flex-column justify-content-start align-items-center">
+
+                        <i class="myplay bi bi-google-play position-absolute mt-5 text-warning  "></i>
+                        <img class="w-100"
+                            src="	https://image5.exxen.com/content/F/o1/51445/Poster.jpg?v=638283755716803962" alt="">
+                        <div class="text-white text-center fs-5 fw-bold p3">Suudi Arabistan Pro Lig</div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a
+                        class="mycard w-100 position-relative d-flex flex-column justify-content-start align-items-center">
+
+                        <i class="myplay bi bi-google-play position-absolute mt-5 text-warning  "></i>
+                        <img class="w-100"
+                            src="https://image1.exxen.com/content/R/nP/54663/Poster.jpg?v=638374681970988491" alt="">
+                        <div class="text-white text-center fs-5 fw-bold p3">FIFA Kulüpler Dünya Kupası 2023</div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a
+                        class="mycard w-100 position-relative d-flex flex-column justify-content-start align-items-center">
+
+                        <i class="myplay bi bi-google-play position-absolute mt-5 text-warning  "></i>
+                        <img class="w-100"
+                            src="https://image2.exxen.com/content/S/Ez/55187/Poster.jpg?v=638386598392415422" alt="">
+                        <div class="text-white text-center fs-5 fw-bold p3">Afrika Uluslar Kupası 2023</div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a
+                        class="mycard w-100 position-relative d-flex flex-column justify-content-start align-items-center">
+
+                        <i class="myplay bi bi-google-play position-absolute mt-5 text-warning  "></i>
+                        <img class="w-100"
+                            src="	https://image3.exxen.com/content/A/KL/53974/Poster.jpg?v=638394747606320491" alt="">
+                        <div class="text-white text-center fs-5 fw-bold p3">Tolgashow Çılgın sezon</div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a
+                        class="mycard w-100 position-relative d-flex flex-column justify-content-start align-items-center">
+
+                        <i class="myplay bi bi-google-play position-absolute mt-5 text-warning  "></i>
+                        <img class="w-100"
+                            src="	https://image4.exxen.com/content/s/2O/22396/Poster.jpg?v=638217678502738349" alt="">
+                        <div class="text-white text-center fs-5 fw-bold p3">Gibi</div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a
+                        class="mycard w-100 position-relative d-flex flex-column justify-content-start align-items-center">
+
+                        <i class="myplay bi bi-google-play position-absolute mt-5 text-warning  "></i>
+                        <img class="w-100"
+                            src="	https://image5.exxen.com/content/n/lC/22377/Poster.jpg?v=638393944335016113" alt="">
+                        <div class="text-white text-center fs-5 fw-bold p3">Konuşanlar</div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a
+                        class="mycard w-100 position-relative d-flex flex-column justify-content-start align-items-center">
+
+                        <i class="myplay bi bi-google-play position-absolute mt-5 text-warning  "></i>
+                        <img class="w-100"
+                            src="https://image1.exxen.com/content/9/es/39508/Poster.jpg?v=638163246197581395" alt="">
+                        <div class="text-white text-center fs-5 fw-bold p3">Leyla ile Mecnun</div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a
+                        class="mycard w-100 position-relative d-flex flex-column justify-content-start align-items-center">
+
+                        <i class="myplay bi bi-google-play position-absolute mt-5 text-warning  "></i>
+                        <img class="w-100"
+                            src="https://image2.exxen.com/content/0/hS/46355/Poster.jpg?v=638386541738388323" alt="">
+                        <div class="text-white text-center fs-5 fw-bold p3">Sadece Arkadaşız</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Main Ends -->
+
+    <div class="bg-black">
+        <footer class="container-lg px-lg-5 pt-5">
+            <div class="px-lg-5 d-flex flex-column align-items-center">
+                <img height="120px" src="https://wimage.exxen.com/img/landing/devices.svg" alt="">
+                <p class="fs-1 text-center text-light fw-semibold p-4">
+                    Hemen üye ol, cepte, tablette, bilgisayarda, istediğin zaman, istediğin yerde exxen.com, Google
+                    Play, AppGallery, App Store, Apple TV ve Android TV'den izlemeye başla.
+                </p>
+                <div class="row gap-l-4 gap-5 justify-content-center  w-100 px-lg-5">
+                    <a class="p-0 text-center col-md-2  me-3" href="" target="_blank">
+                        <img height="40px" src="https://wimage.exxen.com/img/app-store-2.svg" alt="">
+                    </a>
+                    <a class="p-0 text-center col-md-2" href="" target="_blank">
+                        <img height="40px" src="https://wimage.exxen.com/img/google-play@3x.png" alt="">
+                    </a>
+                    <a class=" p-0 text-center col-md-2" href="" target="_blank">
+                        <img height="40px" src="https://wimage.exxen.com/img/landing/huawei-app-gallery@3x.png" alt="">
+                    </a>
+                </div>
+                <div class="d-flex justify-content-between gap-5 my-4">
+                    <a class="text-warning" href=""> <i class="bi bi-instagram fs-3"></i> </a>
+                    <a class="text-warning" href=""> <i class="bi bi-facebook fs-3"></i> </a>
+                    <a class="text-warning" href=""> <i class="bi bi-twitter fs-3"></i> </a>
+                    <a class="text-warning" href=""> <i class="bi bi-youtube fs-3"></i> </a>
+                    <a class="text-warning" href=""> <i class="bi bi-tiktok fs-3"></i> </a>
+                </div>
+                <div class="bg-dark w-100 p-4 text-center my-4">
+                    <a class="text-warning fw-bold fs-4" href="">Exxen Yardım Merkezi</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+ 
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
